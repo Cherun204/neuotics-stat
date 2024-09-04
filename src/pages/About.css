@@ -1,0 +1,34 @@
+/* src/pages/About.css */
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.bio-section {
+  margin-top: 20px;
+}
+
+.team-photo,
+.lab-photo {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.team-photo img,
+.lab-photo img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  color: #6a11cb;
+}
+
+p {
+  line-height: 1.6;
+}

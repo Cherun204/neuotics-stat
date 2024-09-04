@@ -1,0 +1,18 @@
+/* src/pages/Products.css */
+.products-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    font-family: Arial, sans-serif;
+  }
+  
+  .products-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .products-container p {
+    font-size: 1.5rem;
+    color: #666;
+  }  

@@ -1,0 +1,18 @@
+/* src/pages/NotFound.css */
+.notfound-container {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #e2ebf0, #cfd9df);
+    font-family: Arial, sans-serif;
+  }
+  
+  .notfound-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .notfound-container p {
+    font-size: 1.5rem;
+    color: #666;
+  }  

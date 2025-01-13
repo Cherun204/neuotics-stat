@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import About from './pages/About';
+import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import './App.css'; // For general styles
@@ -22,6 +23,7 @@ function App() {
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/Careers" element={<Careers />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

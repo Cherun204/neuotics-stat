@@ -1,18 +1,68 @@
-/* src/pages/Contact.css */
 .contact-container {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #d4fc79, #96e6a1);
-    font-family: Arial, sans-serif;
-  }
-  
-  .contact-container h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .contact-container p {
-    font-size: 1.5rem;
-    color: #666;
-  }  
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+.contact-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-container p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent to show the background */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-details h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+.contact-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Background Animation */
+@keyframes moveBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ac93c3, #8442ba, #b07dce, #7612db);
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: moveBackground 10s ease infinite;
+  border-radius: 10px;
+}

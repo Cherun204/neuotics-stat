@@ -26,6 +26,43 @@ const About = () => (
       <p>
         Neuotics is equipped with state-of-the-art laboratories and manufacturing facilities. Our cutting-edge technology and rigorous quality control processes ensure that every product we deliver is safe, reliable, and effective.
       </p>
+      <h2>Profile</h2>
+      <p>
+        Neuotics is a 'Science & Research' based company run by Healthcare Professionals. The Neuotics is based at Hyderabad and operating in southern states of India. Neuotics has its strengths in Formulation development, Quality Assurance, Regulatory Affairs, Pharmaceutical Manufacturing and Pharmaceutical marketing.
+      </p>
+      <p>
+        With initial focus into the Gynecology and the ensuing success, Neuotics is gradually spreading its wings into other chronic therapy segments like pain management, diabetology and cardiology as well.
+        The company’s key strength is wide range of 100 products, 5 Specialised Divisions, covering almost all therapeutic segments and specialties.
+        Neuotics Laboratories is a reliable healthcare partner which is not only committed to developing Novel technologies but also to provide the best services to medical fraternity across the country, thereby improving the quality of a patient’s life & helping them live a normal, happy and active life.
+      </p>
+      <h2>Our Vision</h2>
+      <p>
+        Win the pain through Qualitative affordable Medication.
+        Neuotics aims at maximizing healthcare facilities by providing quality & Affordable drug formulations to cater the healthcare needs of the people across nation.
+      </p>
+      <h2>Our Values</h2>
+      <ul>
+        <li><strong>Quality:</strong> Get it right the first time</li>
+        <li><strong>Reliability:</strong> Maintain efficiency & discipline in all processes & systems and fulfill the promises made to stakeholders</li>
+        <li><strong>Consistency:</strong> Endeavour to bring new products to the market & consistently deliver value to stakeholders</li>
+        <li><strong>Trust:</strong> Be transparent in dealings</li>
+        <li><strong>Innovation:</strong> Implement new ideas & technologies to meet unmet needs and think ahead of times</li>
+      </ul>
+      <h2>Board of Directors</h2>
+      <ul>
+        <li><strong>SAICHAND VIJAYAGIRI M.Pharm:</strong> Director</li>
+        <li><strong>LAXMINARYANA GOLLA B.Pharm MBA:</strong> Director</li>
+        <li><strong>Dr.G.VENKATESHWARLU M.Pharm PhD.:</strong> Director of Research & Development</li>
+        <li><strong>VIKRAM KULSHRESTHA M.Pharm:</strong> Director of Quality Assurance</li>
+      </ul>
+      <h2>Team Neuotics</h2>
+      <p>
+        A dedicated team of well qualified professionals is a blend of Quality assurance, Regulatory, Production, Manufacturing, Analysis, Marketing, Logistics, Research and Development, Finance who can challenge any farcing competition in the market place.
+        Team Neuotics is pooled by diligent experts who consistently thrive for Neuotics to be better than the best pharmaceutical formulators.
+        Apart from them we have good support from leading Technical and Marketing consultants in the Pharmaceutical Industry and get regular inputs from them for the up gradation and optimization.
+      </p>
+      <h2>Corporate Identity Number</h2>
+      <p>U24299TG2017PTC117998</p>
     </div>
   </div>
 );

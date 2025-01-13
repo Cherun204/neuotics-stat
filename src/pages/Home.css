@@ -1,11 +1,22 @@
-/* src/pages/Home.css */
-body {
-  margin: 0;
-  overflow: hidden;
+.home-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-#threejs-container {
-  position: fixed;
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000px; /* Add perspective for 3D effect */
+  background-color: #6a28a4; /* Updated background color */
+}
+
+.slideshow {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,126 +24,158 @@ body {
   z-index: -1;
 }
 
-.home-container {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero-section {
-  background: linear-gradient(135deg, rgba(106, 17, 203, 0.8), rgba(37, 117, 252, 0.8));
-  color: #fff;
-  padding: 100px 20px;
-  margin-bottom: 30px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.slide.active {
+  opacity: 1;
 }
 
 .hero-content {
   max-width: 800px;
-  margin: 0 auto;
-  animation: fadeIn 2s ease-in-out;
+  z-index: 1;
+  color: white;
+  transform: rotateY(0deg); /* Initial 3D rotation */
+  transition: transform 0.5s; /* Smooth transition for 3D effect */
+}
+
+.hero-content:hover {
+  transform: rotateY(10deg); /* Rotate on hover for 3D effect */
 }
 
 .company-name {
   font-size: 4em;
-  margin: 0;
-  animation: fadeInDown 1.5s ease-in-out;
+  margin-bottom: 10px;
+  color: white; /* Ensure the company name is white */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+.company-name:hover {
+  color: #6a28a4; /* Change color on hover */
+  transform: scale(1.5); /* Scale up on hover */
 }
 
 .tagline {
   font-size: 1.5em;
-  margin: 10px 0 20px;
-  animation: fadeInUp 1.5s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .learn-more-btn {
-  background-color: #fff;
-  color: #6a11cb;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6a28a4; /* Updated button background color */
+  color: white;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  transition: transform 0.3s; /* Smooth transition for button */
 }
 
 .learn-more-btn:hover {
-  background-color: #e0e0e0;
-  transform: scale(1.05);
+  background-color: #5a1e8a; /* Slightly darker shade for hover effect */
+  transform: scale(1.1); /* Scale up on hover */
 }
 
-.about-section,
-.products-section,
-.contact-section {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+section {
+  padding: 50px 20px;
   text-align: center;
-  position: relative;
-  z-index: 2;
-  animation: fadeIn 2s ease-in-out;
 }
 
-.products-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.about-section {
+  background-color: #f5f5f5;
 }
 
-.product-card {
-  background-color: #f4f4f4;
-  color: #333;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 10px;
-  width: 200px;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.partners-section {
+  background-color: #e0e0e0;
 }
 
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.achievements-section {
+  background-color: #d5d5d5;
 }
 
-.contact-btn {
-  background-color: #6a11cb;
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
+.products-section {
+  background-color: #c0c0c0;
+}
+
+.services-section {
+  background-color: #b5b5b5;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  transform: rotateX(0deg); /* Initial 3D rotation */
+  transition: transform 0.5s; /* Smooth transition for 3D effect */
+  color: #6a28a4; /* Updated heading color */
+}
+
+h2:hover {
+  transform: rotateX(10deg); /* Rotate on hover for 3D effect */
+}
+
+p {
   font-size: 1.2em;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  max-width: 800px;
+  margin: 0 auto;
+  transform: rotateX(0deg); /* Initial 3D rotation */
+  transition: transform 0.5s; /* Smooth transition for 3D effect */
+  color: #0c0c0c; /* Updated paragraph color */
 }
 
-.contact-btn:hover {
-  background-color: #5b0fb3;
-  transform: scale(1.05);
+p:hover {
+  transform: rotateX(10deg); /* Rotate on hover for 3D effect */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px 10px;
   }
-  to {
-    opacity: 1;
+
+  .company-name {
+    font-size: 2em;
+  }
+
+  .tagline {
+    font-size: 1em;
+  }
+
+  .learn-more-btn {
+    padding: 8px 16px;
+  }
+
+  section {
+    padding: 30px 10px;
   }
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 20px;
   }
-  to {
-    opacity: 1;
+
+  .company-name {
+    font-size: 3em;
+  }
+
+  .tagline {
+    font-size: 1.2em;
+  }
+
+  .learn-more-btn {
+    padding: 10px 20px;
+  }
+
+  section {
+    padding: 40px 20px;
   }
 }

@@ -1,19 +1,37 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/logo.png'; // Adjust the path to your logo image
 
-const Header = () => (
-  <header className="header">
-    <div className="logo">
-      <NavLink to="/" activeClassName="active-link">Neuotics</NavLink>
-    </div>
-    <nav className="nav">
-      <NavLink to="/" activeClassName="active-link" exact>Home</NavLink>
-      <NavLink to="/products" activeClassName="active-link">Products</NavLink>
-      <NavLink to="/about" activeClassName="active-link">About</NavLink>
-      <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
-    </nav>
-  </header>
-);
+const Header = () => {
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    window.location.href = '/';
+  };
+
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    window.location.href = '/';
+  };
+
+  return (
+    <header className="header">
+      <div className="logo">
+        <a href="/" onClick={handleLogoClick} className="logo-link">
+          <img src={logo} alt="Neuotics Logo" className="logo-image" />
+        </a>
+      </div>
+      <nav className="nav">
+        <ul>
+          <li><a href="/" onClick={handleHomeClick} className="nav-link">Home</a></li>
+          <li><Link to="/products" className="nav-link">Products</Link></li>
+          <li><Link to="/about" className="nav-link">About</Link></li>
+          <li><Link to="/contact" className="nav-link">Contact</Link></li>
+          <li><Link to="/careers" className="nav-link">Careers</Link></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

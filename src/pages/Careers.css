@@ -1,9 +1,9 @@
-.about-container {
+.careers-container {
   padding: 20px;
-  font-family: 'Roboto', sans-serif; /* Updated font */
+  font-family: 'Roboto', sans-serif;
 }
 
-.about-container h1 {
+.careers-container h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
   text-align: center;
@@ -11,7 +11,7 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-.about-container p {
+.careers-container p {
   font-size: 1.2em;
   line-height: 1.8; /* Increased line height for better readability */
   margin-bottom: 20px;
@@ -21,11 +21,7 @@
   font-style: italic; /* Italic style for paragraphs */
 }
 
-.bio-section {
-  margin-top: 20px;
-}
-
-.bio-section h2 {
+.careers-container h2 {
   font-size: 2em;
   margin-bottom: 10px;
   color: white;
@@ -35,38 +31,27 @@
   animation: slideInLeft 1s ease-in-out;
 }
 
-.bio-section p, .bio-section ul {
+.careers-container p, .careers-container ul {
   margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
   font-family: 'Georgia', serif; /* Added font style for bio-section paragraphs */
   font-style: italic; /* Italic style for bio-section paragraphs */
 }
 
-.bio-section ul {
+.careers-container ul {
   list-style-type: none;
   padding: 0;
 }
 
-.bio-section ul li {
+.careers-container ul li {
   margin-bottom: 10px;
 }
 
-.bio-section ul li strong {
+.careers-container ul li strong {
   color: #6a28a4;
 }
 
-.team-photo, .lab-photo {
-  margin-bottom: 20px;
-  animation: zoomIn 1s ease-in-out;
-}
-
-.team-photo img, .lab-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Animations */
+/* 3D Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -92,4 +77,23 @@
   to {
     transform: scale(1);
   }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotateY(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+.careers-container h1, .careers-container h2 {
+  animation: rotateIn 1s ease-in-out;
+}
+
+.careers-container p {
+  animation: zoomIn 1s ease-in-out;
 }

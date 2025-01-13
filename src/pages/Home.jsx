@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import vegImage from '../assets/veg.jpg';
+import vegGlobeImage from '../assets/veg-globe.jpg';
+import medicineImage from '../assets/medicine.jpg';
+import labDocImage from '../assets/lab-doc.jpg';
+import humanImage from '../assets/human.jpg';
 
 const images = [
-  '/src/assets/veg.jpg',
-  '/src/assets/veg-globe.jpg',
-  '/src/assets/medicine.jpg',
-  '/src/assets/lab-doc.jpg',
-  '/src/assets/human.jpg',
+  vegImage,
+  vegGlobeImage,
+  medicineImage,
+  labDocImage,
+  humanImage,
 ];
 
 const Home = () => {

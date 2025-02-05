@@ -1,68 +1,42 @@
 .contact-container {
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
   font-family: Arial, sans-serif;
-  position: relative;
-  z-index: 1;
-  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-radius: 15px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.5s;
 }
 
-.contact-container h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contact-container p {
-  font-size: 1.2em;
-  line-height: 1.5;
-  margin-bottom: 20px;
+.contact-container:hover {
+  transform: perspective(1000px) rotateY(10deg);
 }
 
 .contact-details {
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent to show the background */
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 20px;
 }
 
 .contact-details h2 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-bottom: 10px;
+  color: #6a28a4;
 }
 
 .contact-details p {
+  font-size: 1.2em;
   margin-bottom: 10px;
+  color: #333;
 }
 
-.contact-details a {
-  color: #007bff;
-  text-decoration: none;
+.map-container {
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
 }
 
-.contact-details a:hover {
-  text-decoration: underline;
-}
-
-/* Background Animation */
-@keyframes moveBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.contact-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.map-container iframe {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(270deg, #ac93c3, #8442ba, #b07dce, #7612db);
-  background-size: 600% 600%;
-  z-index: -1;
-  animation: moveBackground 10s ease infinite;
-  border-radius: 10px;
+  height: 250px;
+  border: 0;
 }
